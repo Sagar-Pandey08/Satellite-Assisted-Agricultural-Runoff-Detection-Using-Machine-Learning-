@@ -1,5 +1,6 @@
+# Heading 1
 Satellite-Assisted Agricultural Runoff Detection Using Machine Learning
-
+## Heading 2
 Project Overview
 
 Agricultural runoff — the flow of excess fertilizers, pesticides, and sediments from farmlands — is one of the leading causes of water pollution and soil degradation.
@@ -7,6 +8,7 @@ This project leverages satellite remote sensing, GIS-based data preprocessing, a
 
 By using multi-spectral satellite bands and land cover classification models, the project identifies areas with high runoff risk based on vegetation, soil, and water reflectance patterns.
 
+## Heading 2
 Objectives
 
 🌍 Detect agricultural runoff zones using multi-spectral satellite imagery.
