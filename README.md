@@ -27,27 +27,26 @@ Satellite-Assisted-Agricultural-Runoff-Detection-Using-Machine-Learning/
 ├── requirements.txt
 │
 ├── src/
-│   ├── 01_dataset_builder.py
-│   ├── 02_train_random_forest.py
-│   ├── 03_evaluate_model.py
-│   ├── 04_predict_batches.py
-│   ├── 05_refined_ndvi_ndwi.py
-│   └── 06_run_demo.py
+│ ├── 01_dataset_builder.py
+│ ├── 02_train_random_forest.py
+│ ├── 03_evaluate_model.py
+│ ├── 04_predict_batches.py
+│ ├── 05_refined_ndvi_ndwi.py
+│ └── 06_run_demo.py
 │
 ├── data/
-│   ├── bands/        ← satellite band arrays (.npy)
-│   ├── labels/       ← land cover label maps (.tif)
-│   └── testbands/    ← test sample for inference
+│ ├── bands/ ← satellite band arrays (.npy)
+│ ├── labels/ ← land cover label maps (.tif)
+│ └── testbands/ ← test sample for inference
 │
 ├── models/
-│   └── rfmodel1.pkl  ← trained Random Forest model
+│ └── rfmodel1.pkl ← trained Random Forest model
 │
 └── outputs/
-    ├── X_dataset_small1.npy
-    ├── y_dataset_small1.npy
-    ├── confusion_matrix.png
-    └── runoff_risk_map.png
-
+├── X_dataset_small1.npy
+├── y_dataset_small1.npy
+├── confusion_matrix.png
+└── runoff_risk_map.png
 ## Requirements 
 
 numpy
