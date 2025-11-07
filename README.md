@@ -1,15 +1,14 @@
-# Heading 1
-Satellite-Assisted Agricultural Runoff Detection Using Machine Learning
-## Heading 2
-Project Overview
+
+# Satellite-Assisted Agricultural Runoff Detection Using Machine Learning
+
+## Project Overview
 
 Agricultural runoff — the flow of excess fertilizers, pesticides, and sediments from farmlands — is one of the leading causes of water pollution and soil degradation.
 This project leverages satellite remote sensing, GIS-based data preprocessing, and machine learning to detect and analyze runoff zones in agricultural regions.
-
 By using multi-spectral satellite bands and land cover classification models, the project identifies areas with high runoff risk based on vegetation, soil, and water reflectance patterns.
 
-## Heading 2
-Objectives
+
+## Objectives
 
 🌍 Detect agricultural runoff zones using multi-spectral satellite imagery.
 
@@ -21,7 +20,7 @@ Objectives
 
 🛰️ Support sustainable Integrated Water Resource Management (IWRM) practices.
 
-Folder Structure 
+## Folder Structure 
 Satellite-Assisted-Agricultural-Runoff-Detection-Using-Machine-Learning/
 │
 ├── README.md
@@ -49,7 +48,7 @@ Satellite-Assisted-Agricultural-Runoff-Detection-Using-Machine-Learning/
     ├── confusion_matrix.png
     └── runoff_risk_map.png
 
-Requirements 
+##Requirements 
 
 numpy
 pandas
@@ -59,7 +58,7 @@ seaborn
 scikit-learn
 joblib
 
-💧 Runoff Detection & Analysis
+##Runoff Detection & Analysis
 
 The model uses spectral indices to detect potential runoff-prone zones:
 
@@ -73,9 +72,9 @@ NDWI (Normalized Difference Water Index)
 
 NDWI > 0.2 → excess surface water → high runoff probability.
 
-🖼️ Visualization Results
+##Visualization Results
 
-👨‍💻 Author
+##Author
 
 Sagar Pandey
 🎓 B.Tech (AI & ML)
