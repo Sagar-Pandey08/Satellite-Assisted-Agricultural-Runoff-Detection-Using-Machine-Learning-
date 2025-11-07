@@ -48,7 +48,7 @@ Satellite-Assisted-Agricultural-Runoff-Detection-Using-Machine-Learning/
     ├── confusion_matrix.png
     └── runoff_risk_map.png
 
-##Requirements 
+## Requirements 
 
 numpy
 pandas
@@ -58,7 +58,7 @@ seaborn
 scikit-learn
 joblib
 
-##Runoff Detection & Analysis
+## Runoff Detection & Analysis
 
 The model uses spectral indices to detect potential runoff-prone zones:
 
@@ -72,9 +72,9 @@ NDWI (Normalized Difference Water Index)
 
 NDWI > 0.2 → excess surface water → high runoff probability.
 
-##Visualization Results
+## Visualization Results
 
-##Author
+## Author
 
 Sagar Pandey
 🎓 B.Tech (AI & ML)
