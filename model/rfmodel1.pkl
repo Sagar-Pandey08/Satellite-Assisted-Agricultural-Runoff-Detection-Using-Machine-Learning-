@@ -1,0 +1,72 @@
+# ============================================
+# 02_train_random_forest.py
+# ============================================
+# Purpose:
+#   1. Load dataset (X, y)
+#   2. Train a Random Forest model
+#   3. Save the trained model as rfmodel1.pkl
+# ============================================
+
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+import joblib
+import os
+
+# ===============================
+# Step 1: Load Prepared Dataset
+# ===============================
+# Make sure you already generated these files using 01_dataset_builder.py
+X_path = "outputs/X_dataset_small1.npy"
+y_path = "outputs/y_dataset_small1.npy"
+
+# If you saved them in the same directory instead of outputs/, update the paths:
+if not os.path.exists(X_path):
+    X_path = "X_dataset_small1.npy"
+if not os.path.exists(y_path):
+    y_path = "y_dataset_small1.npy"
+
+X = np.load(X_path)
+y = np.load(y_path)
+
+print("✅ Dataset loaded successfully:")
+print("Features:", X.shape)
+print("Labels:", y.shape)
+
+# ===============================
+# Step 2: Split into Train & Test
+# ===============================
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+
+# ===============================
+# Step 3: Train Random Forest
+# ===============================
+print("\n🚀 Training Random Forest Model...")
+rf = RandomForestClassifier(
+    n_estimators=200,       # number of trees
+    max_depth=None,         # allow full depth
+    n_jobs=-1,              # use all CPU cores
+    random_state=42
+)
+rf.fit(X_train, y_train)
+
+print("✅ Model trained successfully!")
+
+# ===============================
+# Step 4: Evaluate Briefly
+# ===============================
+y_pred = rf.predict(X_test)
+acc = accuracy_score(y_test, y_pred)
+print(f"📊 Validation Accuracy: {acc*100:.2f}%")
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# ===============================
+# Step 5: Save Model as .pkl
+# ===============================
+os.makedirs("models", exist_ok=True)
+joblib.dump(rf, "models/rfmodel1.pkl")
+print("\n💾 Model saved successfully → models/rfmodel1.pkl")
